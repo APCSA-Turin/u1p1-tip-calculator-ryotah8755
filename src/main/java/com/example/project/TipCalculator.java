@@ -13,33 +13,33 @@ public class TipCalculator {
 
         Scanner scan = new Scanner(System.in);
         
-        System.out.println("The bill before tip: " + cost + "$");
-        System.out.println("Total percetage " + percent + "%");
+        // System.out.println("The bill before tip: " + cost + "$");
+        // System.out.println("Total percetage " + percent + "%");
         double tip = (double)(percent * (cost/100));
-        System.out.println("Total tip: $" + df.format(tip));
+        // System.out.println("Total tip: $" + df.format(tip));
 
         double total = (double)(percent * (cost/100) + cost);
-        System.out.println("Total Bill with tip: $" + df.format(total));
+        // System.out.println("Total Bill with tip: $" + df.format(total));
 
         double PerPersonCost = (double)(cost/people);
-        System.out.println("Per person cost before tip: $" +  df.format(PerPersonCost));
+        // System.out.println("Per person cost before tip: $" +  df.format(PerPersonCost));
 
         double TipPerPerson = (double)(tip/people);
-        System.out.println("Tip per person: $" +  df.format(TipPerPerson));
+        // System.out.println("Tip per person: $" +  df.format(TipPerPerson));
 
         double TotalPerPerson = PerPersonCost + TipPerPerson;
-        System.out.println("Total cost per person: $" + df.format(TotalPerPerson));
+        // System.out.println("Total cost per person: $" + df.format(TotalPerPerson));
 
         scan.close();
 
         result.append("-------------------------------\n");
-        result.append("Total bill before tip: "+ cost + "$" ); //concatenate to this string. DO NOT ERASE AND REWRITE
-        result.append("Total percentage: " + percent + "%" );
-        result.append("Total tip: $" + df.format(tip));
-        result.append("Total Bill with tip: $" + df.format(total));
-        result.append("Per person cost before tip: $" +  df.format(PerPersonCost));
-        result.append("Tip per person: $" +  df.format(TipPerPerson));
-        result.append("Total cost per person: $" + df.format(TotalPerPerson));
+        result.append("Total bill before tip: "+ cost + "$" + "\n" ); //concatenate to this string. DO NOT ERASE AND REWRITE
+        result.append("Total percentage: " + percent + "%" + "\n");
+        result.append("Total tip: $" + df.format(tip)+ "\n");
+        result.append("Total Bill with tip: $" + df.format(total)+ "\n");
+        result.append("Per person cost before tip: $" +  df.format(PerPersonCost)+ "\n");
+        result.append("Tip per person: $" +  df.format(TipPerPerson)+ "\n");
+        result.append("Total cost per person: $" + df.format(TotalPerPerson)+ "\n");
         result.append("-------------------------------\n");
 
 
