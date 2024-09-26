@@ -1,7 +1,7 @@
 package com.example.project;
 
 import java.text.DecimalFormat;
-import java.util.Scanner;
+
 
 public class TipCalculator {
     //WRITE YOUR PROGRAM IN calculateTip
@@ -9,9 +9,9 @@ public class TipCalculator {
         //DO NOT DELETE ANY OF THE CODE BELOW      
         StringBuilder result = new StringBuilder();
         //your code here
+        
         DecimalFormat df = new DecimalFormat("###.##");
 
-        Scanner scan = new Scanner(System.in);
         
         // System.out.println("The bill before tip: " + cost + "$");
         // System.out.println("Total percetage " + percent + "%");
@@ -30,10 +30,9 @@ public class TipCalculator {
         double TotalPerPerson = PerPersonCost + TipPerPerson;
         // System.out.println("Total cost per person: $" + df.format(TotalPerPerson));
 
-        scan.close();
 
         result.append("-------------------------------\n");
-        result.append("Total bill before tip: "+ cost + "$" + "\n" ); //concatenate to this string. DO NOT ERASE AND REWRITE
+        result.append("Total bill before tip: "+ "$" + cost + "\n" ); //concatenate to this string. DO NOT ERASE AND REWRITE
         result.append("Total percentage: " + percent + "%" + "\n");
         result.append("Total tip: $" + df.format(tip)+ "\n");
         result.append("Total Bill with tip: $" + df.format(total)+ "\n");
